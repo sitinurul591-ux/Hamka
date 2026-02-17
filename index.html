@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WELCOME TO ZYNOXHUNTER</title>
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        background: linear-gradient(135deg, #1e1e2f, #2e2e50);
+        color: #fff;
+        text-align: center;
+        padding: 50px;
+        transition: background 0.5s;
+    }
+    h1 {
+        color: #ffcc00;
+        font-size: 36px;
+        margin-bottom: 20px;
+        animation: fadeIn 1s ease-in;
+    }
+    p {
+        font-size: 18px;
+        line-height: 1.6;
+        margin: 20px auto;
+        max-width: 600px;
+        animation: fadeIn 2s ease-in;
+    }
+    .btn {
+        padding: 12px 25px;
+        font-size: 16px;
+        color: #fff;
+        background: #ffcc00;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        margin: 15px;
+        transition: all 0.3s;
+        text-decoration: none;
+        display: inline-block;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        animation: fadeIn 2.5s ease-in;
+    }
+    .btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+        background: #e6b800;
+    }
+    .page {
+        display: none;
+        opacity: 0;
+        transition: opacity 0.7s;
+    }
+    .active {
+        display: block;
+        opacity: 1;
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px);}
+        to { opacity: 1; transform: translateY(0);}
+    }
+</style>
+</head>
+<body>
+
+<!-- HALAMAN 1 -->
+<div id="page1" class="page active">
+    <h1>WELCOME TO ZYNOXHUNTER</h1>
+    <p>
+        Halo semuanya, perkenalkan nama ku Hamka. Aku ingin mengenalkan kalian apa itu situs ZynoxHunter. 
+        Sebelum itu, kalian bisa mengisi Google Form dulu. Setelah itu, kita lanjut ke halaman berikutnya.
+    </p>
+    <a href="https://docs.google.com/forms" target="_blank" class="btn">Isi Google Form</a>
+    <button class="btn" onclick="nextPage()">Lanjut ke Halaman Berikutnya</button>
+</div>
+
+<!-- HALAMAN 2 -->
+<div id="page2" class="page">
+    <h1>APA ITU ZYNOXHUNTER?</h1>
+    <p>
+        ZynoxHunter adalah tim komunitas game dan akademik. Kita bisa main Roblox sekaligus belajar banyak hal tentang internet, 
+        seperti coding, teknologi, dan lain-lain.
+    </p>
+    <button class="btn" onclick="backPage()">Kembali ke Halaman Sebelumnya</button>
+</div>
+
+<script>
+function nextPage() {
+    document.getElementById('page1').classList.remove('active');
+    document.getElementById('page2').classList.add('active');
+}
+
+function backPage() {
+    document.getElementById('page2').classList.remove('active');
+    document.getElementById('page1').classList.add('active');
+}
+</script>
+
+</body>
+</html>
